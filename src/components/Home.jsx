@@ -48,7 +48,7 @@ function Home() {
 
   return (
     <div className="h-auto w-full flex justify-center flex-wrap gap-4 md:gap-7">
-      <div className="h-auto px-3 py-4 w-full  md:w-[27%] shadow-md flex flex-col gap-2">
+      <div className="no-print h-auto px-3 py-4 w-full  md:w-[27%] shadow-md flex flex-col gap-2">
         <InputField type="text" title="Name" placeholder="Enter your fullname" length="50" onChange={handleNameChange} />
         <InputField type="text" title="Domain Name" placeholder="example.com.np" length="50" onChange={handleDomainChange}/>
         <InputField type="text" title="Primary Name Server" placeholder="ns01.nameserver.com" length="60" onChange={handlePNSChange}/>
@@ -61,7 +61,7 @@ function Home() {
           <button>PRINT</button>  
         </div>
       </div>
-      <div className="h-auto w-full flex flex-col md:w-[67%] shadow-md">
+      <div className="no-shadow h-auto w-full flex flex-col md:w-[67%] shadow-md">
         <div ref={contentRef} className="h-full w-full px-5 py-4 flex justify-center flex-col ">
           <div className="flex justify-end">Date: {day} {month} {year}</div>
           <div className="flex justify-start">To,<br />The Hostmaster,<br />Mercantile Communication Pvt. Ltd.<br />Durbar Marg, Kathmandu</div><br />
@@ -72,7 +72,7 @@ function Home() {
           <div className="flex justify-start">Domain name: {domain} <br />Primary Name Server: {pNS} <br />Secondary Name Server: {sNS}</div><br />
           <div className="flex justify-start">Sincerely,<br/>Name: {name}<br/>Address: {address}<br/>Email: {email}<br/>Phone: {phone}</div><br />
         </div>
-        <div onClick={handlePrint} className=" h-10 w-full flex justify-center items-center flex-row gap-1 bg-emerald-300 cursor-pointer hover:rounded-sm md:hidden">
+        <div onClick={handlePrint} className="no-print h-10 w-full flex justify-center items-center flex-row gap-1 bg-emerald-300 cursor-pointer hover:rounded-sm md:hidden">
           <PiPrinterBold /> 
           <button>PRINT</button>  
         </div>

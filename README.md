@@ -1,3 +1,3 @@
-#Cover letter generator
+# Cover letter generator
 
--View Live:
+- View Live:
